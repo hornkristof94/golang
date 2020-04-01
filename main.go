@@ -92,7 +92,7 @@ func createBook(w http.ResponseWriter, r *http.Request) {
 	// connect db
 	collection := helper.ConnectDB()
 
-	// insert our book model.
+	// insert our book model
 	result, err := collection.InsertOne(context.TODO(), book)
 
 	if err != nil {
